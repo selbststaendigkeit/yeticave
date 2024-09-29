@@ -4,6 +4,7 @@ require_once('./user_data.php');
 require_once('./custom_functions.php');
 require_once('./db_connection.php');
 
+
 $safe_lot_creation_date = mysqli_real_escape_string($db_connection, 'created_at');
 $sql_lots_query = "SELECT l.title AS title,
                           c.title AS category,
