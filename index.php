@@ -6,7 +6,8 @@ require_once('./db_connection.php');
 
 
 $safe_lot_creation_date = mysqli_real_escape_string($db_connection, 'created_at');
-$sql_lots_query = "SELECT l.title AS title,
+$sql_lots_query = "SELECT l.id AS id,
+                          l.title AS title,
                           c.title AS category,
                           l.start_price AS price,
                           l.img_path AS image_url,
