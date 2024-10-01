@@ -23,14 +23,7 @@ if ($sql_lots_query_result) {
     print('Ошибка запроса SQL: ' . mysqli_error($db_connection));
 }
 
-$sql_categories_query = "SELECT title, alias
-                           FROM categories";
-$sql_categories_query_result = mysqli_query($db_connection, $sql_categories_query);
-if ($sql_categories_query_result) {
-    $good_categories = mysqli_fetch_all($sql_categories_query_result, MYSQLI_ASSOC);
-} else {
-    print('Ошибка запроса SQL: ' . mysqli_error($db_connection));
-}
+$good_categories = get_categories($db_connection);
 
 $page_content = include_template('main.php', [
     'categories' => $good_categories,
