@@ -30,7 +30,7 @@ $page_content = include_template('lot_page.php', [
     'categories' => $good_categories,
     'lot' => $lot
 ]);
-$layout_content = include_template('layout.php', [
+$layout_content = include_template('layout_lot.php', [
     'pagetitle' => htmlspecialchars($lot['title']),
     'content' => $page_content,
     'categories' => $good_categories
