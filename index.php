@@ -1,7 +1,7 @@
 <?php
 require_once('./helpers.php');
 require_once('./user_data.php');
-require_once('./custom_functions.php');
+require_once('./functions/custom_functions.php');
 require_once('./db_connection.php');
 
 
